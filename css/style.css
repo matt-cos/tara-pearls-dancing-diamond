@@ -1,0 +1,70 @@
+/*
+* #global
+*
+* #header
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/********************\
+       #global
+\********************/
+a {
+  display: block;
+}
+img {
+  width: 100%;
+}
+.clearfix {
+  clear: both;
+}
+.one-half {
+  width: 50%;
+  float: left;
+}
+.one-fifth {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.full-width {
+  width: 100%;
+}
+.width800 {
+  width: 800px;
+  margin: 0 auto;
+}
+/********************\
+       #header
+\********************/
+header {
+  width: 100%;
+  background-color: #ffffff;
+  height: 100px;
+  z-index: 10;
+}
+header > div {
+  display: inline-block;
+}
+header .social-icons {
+  float: right;
+}
+section {
+  padding: 40px 0;
+}
+#landing {
+  height: 75vh;
+  background-color: green;
+  top: 0;
+  z-index: 2;
+}

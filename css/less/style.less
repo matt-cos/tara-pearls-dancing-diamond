@@ -1,0 +1,81 @@
+@light-green: green;
+@mid-green: green;
+@dark-green: green;
+@test: red;
+/*
+* #global
+*
+* #header
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+/********************\
+       #global
+\********************/
+a {
+	display: block;
+}
+img {
+	width: 100%;
+}
+.clearfix {
+	clear: both;
+}
+.one-half {
+	width: 50%;
+	float: left;
+}
+.one-fifth {
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.full-width {
+	width: 100%;
+}
+.width800 {
+	width: 800px;
+	margin: 0 auto;
+}
+
+/********************\
+       #header
+\********************/
+header {
+	.full-width;
+	background-color: rgb(255, 255, 255);
+	height: 100px;
+	z-index: 10;
+	> div {
+		display: inline-block;
+	}
+	.social-icons {
+		float: right;
+	}
+}
+
+
+section {
+	padding: 40px 0;
+}
+#landing {
+	height: 75vh;
+	background-color: @light-green;
+	top: 0;
+	z-index: 2;
+}
+#the-collection {
+
+}

@@ -1578,10 +1578,10 @@ $(document).ready(function() {
 	//shop now buttons
 	$(".owl-item").hover(
 	function() {
-		$(this).find("a").fadeIn('fast');
+		$(this).find("a").show();
 	},
 	function() {
-		$(this).find("a").fadeOut('fast');
+		$(this).find("a").hide();
 	}
 	);
 });

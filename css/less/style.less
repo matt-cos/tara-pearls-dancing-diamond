@@ -29,6 +29,10 @@
 h1 {
 	font-family: 'Libre Baskerville', serif;
 	font-weight: 400;
+	color: #fff;
+	font-variant: small-caps;
+	font-size: 60px;
+	margin: 25px 0;
 }
 
 h2 {
@@ -52,8 +56,11 @@ h4 {
 }
 
 h5 {
-	font-family: 'Libre Baskerville', serif;
-	font-weight: 400;
+	font-family: 'Open Sans', serif;
+	font-weight: 300;
+	font-size: 30px;
+	color: #fff;
+	margin: 25px 0;
 }
 
 h6 {
@@ -68,6 +75,27 @@ p, div {
 	letter-spacing: 1px;
 }
 
+a {
+	text-decoration: none;
+
+	i {
+		color: @mid-green;
+		transition: color 0.2s;
+		-webkit-transition: color 0.2s;
+
+		&:hover {
+			color: @light-green;
+		}
+	}
+}
+
+sup {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	top: -1.5em;
+}
+
 .dark-bg h2, .dark-bg p {
 	color: #fff;
 }
@@ -78,7 +106,6 @@ img {
 
 .container {
 	display: block;
-	/*width: 900px;*/
 	height: 100%;
 	margin: 0 auto;
 }
@@ -119,7 +146,7 @@ img {
 	background-color: @mid-green;
 	display: inline-block;
 	padding: 10px 30px;
-	color: #fff;
+	color: #fff !important;
 	text-decoration: none;
 	transition: background-color 0.3s;
 	-webkit-transition: background-color 0.3s;
@@ -148,7 +175,7 @@ header {
 			width: 200px;
 		}
 	}
-	.container{ 
+	.container { 
 
 		> div {
 			display: inline-block;
@@ -161,6 +188,18 @@ header {
 
 	.social-icons {
 		float: right;
+
+		i {
+			width: 40px;
+			height: 40px;
+
+			&:before {
+				position: relative;
+				top: 12px;
+				left: 15px;
+				transform: translateY(-50%);
+			}
+		}
 	}
 }
 
@@ -174,8 +213,21 @@ section {
 #landing {
 	height: 75vh;
 	background-color: @light-green;
+	background: url("../images/build/dancing-diamond-header-image.jpg");
+	background-size: cover;
 	top: 0;
 	z-index: 2;
+	
+	.content {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+
+		img {
+			width: 100px;
+		}
+	}
 
 	.anchor {
 		position: absolute;
@@ -187,8 +239,21 @@ section {
 }
 /********** #inspired section **********/
 #inspired {
+	/*
 	margin-top: -69px;
 	padding-top: 109px;
+	*/
+	padding: 0;
+
+	.one-half:nth-child(1) {
+		height: 100%;
+		text-align: center;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
 }
 
 /********** #featured product section **********/
@@ -203,8 +268,15 @@ section {
 	.owl-controls {
 		position: absolute;
 		top: 80px;
-		width: 110%;
-		left: -5%;
+		width: 108%;
+		left: -4%;
+		color: @mid-green;
+		transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+
+		&:hover {
+			color: @light-green;
+		}
 	}
 
 	.owl-prev {
@@ -227,6 +299,10 @@ section {
 	a {
 		text-decoration: none;
 		color: #000;
+		position: absolute;
+		top: 40%;
+		transform: translateX(-50%);
+		display: none;
 	}
 }
 /********** #perfect dance section **********/
@@ -295,12 +371,6 @@ footer {
 		color: #fff;
 	}
 }
-
-
-
-
-
-
 
 @media screen and (min-width: 1220px) {
 	.container {

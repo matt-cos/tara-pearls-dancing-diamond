@@ -10,13 +10,13 @@ $(document).ready(function() {
 	});
 	//shop now buttons
 	$(".owl-item").hover(
-	function() {
-		$(this).find("a").show();
-	},
-	function() {
-		$(this).find("a").hide();
-	}
-	);
+		function() {
+			$(this).find("a").show();
+		},
+		function() {
+			$(this).find("a").hide();
+		}
+		);
 });
 
 //smooth scroll all anchor links
@@ -45,5 +45,74 @@ var userFeed = new Instafeed({
 });
 userFeed.run();        
 
+/*
+$('#perfect-dance').parallax({
+    positionX: '0'
+});
+*/
 
+/*
+$('#perfect-dance').parallax({
+	imageSrc: 'https://lh3.googleusercontent.com/87M6X6hiETZcuH7ViT87KncCMr7nnSOJH1djalKHDDfEAjUb2yBbSqBtofso_ecls1YClzOFaoAldam9Iskh_A=s400'
+});
+*/
+
+//JS media queries 
+
+function getWidth() {
+	var windowWidth = $( window ).width();
+//console.log( windowWidth );
+if ( windowWidth > 1220 ) {
+		//console.log("Greater than or equal to 1221");
+		
+		$('#perfect-dance').parallax({
+			positionX: '-200'
+		});
+	} else if ( windowWidth <= 1220 && windowWidth > 980 ) {
+		//console.log("Between 1220 and 981 (inclusive)");
+
+		$('#perfect-dance').parallax({
+			positionX: '-300'
+		});
+	} else if ( windowWidth <= 980 && windowWidth > 740 ) {
+		//console.log("Between 980 and 741 (inclusive)");
+
+		$('#perfect-dance').parallax({
+			positionX: '-400'
+		});
+	} else if ( windowWidth <= 740 && windowWidth > 500 ) {
+		//console.log("Between 740 and 501 (inclusive)");
+
+		$('#perfect-dance').parallax({
+			//imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Cheeseburger.jpg',
+			positionX: '-550'
+		});
+	} else if ( windowWidth <= 500 ) {
+		//console.log("Less than or equal to 500");
+		
+		$('#perfect-dance').parallax({
+			positionX: '0'
+		});
+		$('#the-collection').parallax({
+			positionX: '-1200'
+		});
+	}
+}
+
+
+
+//$('.theElement').redraw();
+
+$( window ).load(function() {
+	getWidth();
+});
+
+
+$( window ).resize(function() {
+
+	getWidth();
+	//$("#perfect-dance").hide().html(data).show();
+	//$("#perfect-dance").load(location.href + " #perfect-dance");
+	//$('#perfect-dance').redraw();
+});
 

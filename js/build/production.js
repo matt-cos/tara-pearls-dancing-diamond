@@ -1624,16 +1624,16 @@ $('#perfect-dance').parallax({
 });
 */
 
-//JS media queries 
-
+// JS media queries 
+// in this case, being used for parallax bg positioning
 function getWidth() {
 	var windowWidth = $( window ).width();
-//console.log( windowWidth );
-if ( windowWidth > 1220 ) {
+
+	if ( windowWidth > 1220 ) {
 		//console.log("Greater than or equal to 1221");
 		
 		$('#perfect-dance').parallax({
-			positionX: '-200'
+			positionX: '-205'
 		});
 	} else if ( windowWidth <= 1220 && windowWidth > 980 ) {
 		//console.log("Between 1220 and 981 (inclusive)");
@@ -1651,7 +1651,6 @@ if ( windowWidth > 1220 ) {
 		//console.log("Between 740 and 501 (inclusive)");
 
 		$('#perfect-dance').parallax({
-			//imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Cheeseburger.jpg',
 			positionX: '-550'
 		});
 	} else if ( windowWidth <= 500 ) {
@@ -1666,20 +1665,23 @@ if ( windowWidth > 1220 ) {
 	}
 }
 
-
-
-//$('.theElement').redraw();
-
 $( window ).load(function() {
 	getWidth();
 });
 
-
 $( window ).resize(function() {
-
 	getWidth();
-	//$("#perfect-dance").hide().html(data).show();
-	//$("#perfect-dance").load(location.href + " #perfect-dance");
-	//$('#perfect-dance').redraw();
+});
+
+// hide back to top button if we are at the top
+$(window).scroll(function(){
+	var ScrollTop = ($(window).scrollTop());
+	console.log(ScrollTop);
+
+	if (ScrollTop == 0) {
+		$(".scrollup").fadeOut('slow');
+	} else {
+		$(".scrollup").fadeIn('slow');
+	}
 });
 

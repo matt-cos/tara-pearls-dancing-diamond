@@ -234,6 +234,9 @@ section {
   width: 90%;
   margin: 0 auto;
 }
+#product-carousel .owl-item .product {
+  margin: 0 10px;
+}
 #product-carousel .owl-controls {
   position: absolute;
   top: 80px;

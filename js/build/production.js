@@ -1573,7 +1573,10 @@ $(document).ready(function() {
 		rewindNav : true,
 		scrollPerPage : false,
 		pagination : false,
-		mouseDrag : false
+		mouseDrag : false,
+		itemsDesktopSmall : [1200, 4],
+		itemsTablet : [740, 3],
+		itemsMobile : [500, 2]
 	});
 	//shop now buttons
 	$(".owl-item").hover(
@@ -1676,12 +1679,28 @@ $( window ).resize(function() {
 // hide back to top button if we are at the top
 $(window).scroll(function(){
 	var ScrollTop = ($(window).scrollTop());
-	console.log(ScrollTop);
-
 	if (ScrollTop == 0) {
 		$(".scrollup").fadeOut('slow');
 	} else {
 		$(".scrollup").fadeIn('slow');
 	}
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

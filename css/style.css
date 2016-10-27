@@ -181,6 +181,7 @@ header .social-icons i:before {
   top: 12px;
   left: 15px;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 section {
   position: relative;
@@ -189,18 +190,15 @@ section {
   overflow: hidden;
   /* temporary during cheeseburger testing period */
 }
-/********** #test video header **********/
+/********** #landing **********/
 #landing {
   height: 700px;
   height: 75vh;
   padding-top: 0;
+  max-height: 850px;
 }
 #landing video {
   position: absolute;
-  /*
-		height: 100%;
-		width: auto;
-		*/
   width: 100%;
 }
 #landing .video-overlay {
@@ -219,36 +217,19 @@ section {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
 }
-/********** #landing **********/
-/*
-#landing {
-	height: 75vh;
-	background-color: @light-green;
-	background: url("../images/build/dancing-diamond-header-image.jpg");
-	background-size: cover;
-	top: 0;
-	z-index: 2;
-	
-	.content {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-
-		img {
-			width: 100px;
-		}
-	}
-
-	.anchor {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-	}
+/* the following 3 lines hide the play button on the poster image on mobile devices */
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
 }
-*/
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
 /********** #inspired section **********/
 #inspired {
   padding: 0;
@@ -309,6 +290,7 @@ section {
   position: absolute;
   top: 40%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   display: none;
   width: 100px;
   padding: 15px 30px;
@@ -386,15 +368,32 @@ footer p {
   .container {
     width: 960px;
   }
+  /*
+	#landing {
+
+		video {
+			position: absolute;
+			height: 100%;
+			width: auto;
+			//left: -300px;
+		}
+	}
+	*/
+}
+@media screen and (max-width: 1115px) {
   #landing video {
-    position: absolute;
-    height: 100%;
-    width: auto;
+    width: 115%;
   }
 }
 @media screen and (max-width: 980px) {
   .container {
     width: 720px;
+  }
+  #landing {
+    height: 500px;
+  }
+  #landing video {
+    width: 130%;
   }
   #inspired .one-half:nth-child(1) {
     left: -180px;
@@ -407,11 +406,28 @@ footer p {
   .one-fifth {
     width: 33%;
   }
+  #landing video {
+    width: 150%;
+    left: -20%;
+  }
+  #landing .video-overlay img {
+    width: 100px;
+  }
+  #landing .video-overlay h1,
+  #landing .video-overlay h5 {
+    margin: 0;
+  }
   #inspired .one-half:nth-child(1) {
     left: -220px;
   }
   #instafeed a {
     width: 33.33333333%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #landing video {
+    height: 100%;
+    width: auto;
   }
 }
 @media screen and (max-width: 500px) {
@@ -427,6 +443,9 @@ footer p {
   .one-fifth {
     width: 50%;
   }
+  #landing video {
+    left: -300px;
+  }
   #inspired {
     height: auto;
     margin-bottom: 40px;
@@ -441,10 +460,24 @@ footer p {
   #inspired .one-half:nth-child(1) img {
     width: 100%;
   }
+  #perfect-dance {
+    left: 0;
+    background-size: 1850px !important;
+    background-position: left top !important;
+  }
+  #perfect-dance * {
+    filter: drop-shadow(6px 16px 20px #000);
+    -webkit-filter: drop-shadow(6px 16px 20px #000);
+  }
   .parallax-mirror:nth-child(1) {
     background-color: #000;
   }
   .parallax-mirror:nth-child(1) img {
     opacity: 0.3;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .logo img {
+    width: 150px;
   }
 }

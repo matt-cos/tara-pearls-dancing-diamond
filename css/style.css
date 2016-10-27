@@ -189,6 +189,33 @@ section {
   overflow: hidden;
   /* temporary during cheeseburger testing period */
 }
+/********** #test video header **********/
+#test {
+  height: 700px;
+  height: 75vh;
+  padding-top: 0;
+}
+#test video {
+  position: absolute;
+  width: 100%;
+}
+#test .video-overlay {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#test .video-overlay img {
+  width: 150px;
+}
+#test .anchor {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+/********** #landing **********/
 #landing {
   height: 75vh;
   background-color: #7c8946;
@@ -355,6 +382,9 @@ footer p {
   .container {
     width: 720px;
   }
+  #inspired .one-half:nth-child(1) {
+    left: -180px;
+  }
 }
 @media screen and (max-width: 740px) {
   .container {
@@ -364,7 +394,7 @@ footer p {
     width: 33%;
   }
   #inspired .one-half:nth-child(1) {
-    left: -80px;
+    left: -220px;
   }
   #instafeed a {
     width: 33.33333333%;

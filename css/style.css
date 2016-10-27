@@ -197,8 +197,11 @@ section {
 }
 #landing video {
   position: absolute;
-  height: 100%;
-  width: auto;
+  /*
+		height: 100%;
+		width: auto;
+		*/
+  width: 100%;
 }
 #landing .video-overlay {
   position: relative;
@@ -382,6 +385,11 @@ footer p {
 @media screen and (max-width: 1220px) {
   .container {
     width: 960px;
+  }
+  #landing video {
+    position: absolute;
+    height: 100%;
+    width: auto;
   }
 }
 @media screen and (max-width: 980px) {

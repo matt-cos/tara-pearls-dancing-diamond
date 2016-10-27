@@ -239,8 +239,11 @@ section {
 
 	video {
 		position: absolute;
+		/*
 		height: 100%;
 		width: auto;
+		*/
+		width: 100%;
 	}
 
 	.video-overlay {
@@ -253,7 +256,7 @@ section {
 			width: 150px;
 		}
 	}
-	
+
 	.anchor {
 		position: absolute;
 		bottom: 10px;
@@ -458,6 +461,14 @@ footer {
 @media screen and (max-width: 1220px) { // <= 1220
 	.container {
 		width: 960px;
+	}
+	#landing {
+
+		video {
+			position: absolute;
+			height: 100%;
+			width: auto;
+		}
 	}
 }
 @media screen and (max-width: 980px) { // <= 980
